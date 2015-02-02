@@ -48,6 +48,7 @@ class Bot:
 
         self.session = requests.Session()
         self.session.verify = verify
+        self.session.headers['Referer'] = self.base_url
 
         self.auth_user = auth_user
         self.auth_pass = auth_pass
